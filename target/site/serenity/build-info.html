@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Serenity Reports</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs"><a href="index.html">Home</a> > Environment details</span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 05-06-2023 01:56:55</span>
+    <br style="clear:left"/>
+</div>
+    <div class="clr"></div>
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="middlb">
+            <div class="table">
+                <h2>Environment details</h2>
+
+                <table class="table table-striped build-info">
+                    <tr>
+                        <td style="width: 30%">Default Driver</td>
+                        <td>firefox</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30%">Driver appium</td>
+                        <td>{appium:systemPort=8201, appium:hub=https://cesarstevenriosu_z5kft8:x2vgxh3lfto9sdxurbwp@hub-cloud.browserstack.com/wd/hub, appium:skipServerInstallation=true, appium:chromedriverPort=18081, appium:newCommandTimeout=0, appium:takesScreenshot=true, appium:warnings={}, appium:disableSuppressAccessibilityService=true, appium:desired={platformName=Android, bstack:options={appiumVersion=1.17.0}, goog:chromeOptions={}, newCommandTimeout=0, deviceName=samsung galaxy s21 ultra, unicodeKeyboard=true, resetKeyboard=true, chromedriverPorts=[[18111, 18121]], automationName=uiautomator2, systemPort=8201, chromedriverPort=18081, build=âtestâ, hub=https://cesarstevenriosu_z5kft8:x2vgxh3lfto9sdxurbwp@hub-cloud.browserstack.com/wd/hub, noReset=false, project=conduit mobile automation tests, skipServerInstallation=true, udid=R5CR100NAXA, appPackage=com.conduitreactnative.qa, appActivity=com.conduitreactnative.SplashActivity, nativeWebScreenshot=true, disableSuppressAccessibilityService=true, platformVersion=11.0}, appium:deviceApiLevel=30, appium:nativeWebScreenshot=true, appium:automationName=uiautomator2, appium:locationContextEnabled=false, appium:deviceScreenSize=1080x2400, appium:deviceManufacturer=samsung, appium:udid=R5CR100NAXA, appium:pixelRatio=2.625, goog:chromeOptions={}, platformName=ANDROID, appium:build=âtestâ, appium:networkConnectionEnabled=true, appium:resetKeyboard=true, appium:deviceScreenDensity=420, appium:viewportRect={left=0, top=74, width=1080, height=2125}, appium:deviceModel=SM-G998B, appium:platformVersion=11, appium:noReset=false, appium:databaseEnabled=false, appium:deviceUDID=R5CR100NAXA, appium:project=conduit mobile automation tests, appium:unicodeKeyboard=true, appium:statBarHeight=74, appium:webStorageEnabled=false, appium:appActivity=com.conduitreactnative.SplashActivity, appium:chromedriverPorts=[[18111, 18121]], appium:deviceName=R5CR100NAXA, appium:javascriptEnabled=true, appium:appPackage=com.conduitreactnative.qa, bstack:options={appiumVersion=1.17.0}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 30%">Operating System</td>
+                        <td>Mac OS X version 12.2.1</td>
+                    </tr>
+                </table>
+
+                    <h2>Driver capabilities: appium</h2>
+                    <table class="table table-striped build-info">
+                            <tr>
+                                <td style="width: 30%">appium:systemPort</td><td>8201</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:hub</td><td>https://cesarstevenriosu_z5kft8:x2vgxh3lfto9sdxurbwp@hub-cloud.browserstack.com/wd/hub</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:skipServerInstallation</td><td>true</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:chromedriverPort</td><td>18081</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:newCommandTimeout</td><td>0</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:takesScreenshot</td><td>true</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:warnings</td><td>{}</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:disableSuppressAccessibilityService</td><td>true</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:desired</td><td>{platformName=Android, bstack:options={appiumVersion=1.17.0}, goog:chromeOptions={}, newCommandTimeout=0, deviceName=samsung galaxy s21 ultra, unicodeKeyboard=true, resetKeyboard=true, chromedriverPorts=[[18111, 18121]], automationName=uiautomator2, systemPort=8201, chromedriverPort=18081, build=âtestâ, hub=https://cesarstevenriosu_z5kft8:x2vgxh3lfto9sdxurbwp@hub-cloud.browserstack.com/wd/hub, noReset=false, project=conduit mobile automation tests, skipServerInstallation=true, udid=R5CR100NAXA, appPackage=com.conduitreactnative.qa, appActivity=com.conduitreactnative.SplashActivity, nativeWebScreenshot=true, disableSuppressAccessibilityService=true, platformVersion=11.0}</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:deviceApiLevel</td><td>30</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:nativeWebScreenshot</td><td>true</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:automationName</td><td>uiautomator2</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:locationContextEnabled</td><td>false</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:deviceScreenSize</td><td>1080x2400</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:deviceManufacturer</td><td>samsung</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:udid</td><td>R5CR100NAXA</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:pixelRatio</td><td>2.625</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">goog:chromeOptions</td><td>{}</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">platformName</td><td>ANDROID</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:build</td><td>âtestâ</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:networkConnectionEnabled</td><td>true</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:resetKeyboard</td><td>true</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:deviceScreenDensity</td><td>420</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:viewportRect</td><td>{left=0, top=74, width=1080, height=2125}</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:deviceModel</td><td>SM-G998B</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:platformVersion</td><td>11</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:noReset</td><td>false</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:databaseEnabled</td><td>false</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:deviceUDID</td><td>R5CR100NAXA</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:project</td><td>conduit mobile automation tests</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:unicodeKeyboard</td><td>true</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:statBarHeight</td><td>74</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:webStorageEnabled</td><td>false</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:appActivity</td><td>com.conduitreactnative.SplashActivity</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:chromedriverPorts</td><td>[[18111, 18121]]</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:deviceName</td><td>R5CR100NAXA</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:javascriptEnabled</td><td>true</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">appium:appPackage</td><td>com.conduitreactnative.qa</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 30%">bstack:options</td><td>{appiumVersion=1.17.0}</td>
+                            </tr>
+                    </table>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div id="beforefooter"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 3.6.12</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: cucumberTestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 192.155 s <<< FAILURE! - in cucumberTestSuite
+successful login.Validate successful login  Time elapsed: 128.644 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for net.serenitybdd.core.pages.RenderedPageObjectView$$Lambda$1245/0x0000000300c35a18@3b58d05f (tried for 70 second(s) with 50 milliseconds interval)
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.2.1', java.version: '18.0.2.1'
+Driver info: driver.version: unknown
+

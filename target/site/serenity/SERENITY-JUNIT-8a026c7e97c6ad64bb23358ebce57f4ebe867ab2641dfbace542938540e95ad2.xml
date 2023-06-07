@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="successful login" skipped="0" tests="2" time="188.76" timestamp="2023-06-05 01:53:41"><testcase name="Validate successful login"><error message="Expected condition failed: waiting for net.serenitybdd.core.pages.RenderedPageObjectView$$Lambda$1245/0x0000000300c35a18@3b58d05f (tried for 70 second(s) with 50 milliseconds interval)&#10;Build info: version: '4.8.0', revision: '267030adea'&#10;System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.2.1', java.version: '18.0.2.1'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.TimeoutException">Expected condition failed: waiting for net.serenitybdd.core.pages.RenderedPageObjectView$$Lambda$1245/0x0000000300c35a18@3b58d05f (tried for 70 second(s) with 50 milliseconds interval)
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.2.1', java.version: '18.0.2.1'
+Driver info: driver.version: unknown</error><system-err>Expected condition failed: waiting for net.serenitybdd.core.pages.RenderedPageObjectView$$Lambda$1245/0x0000000300c35a18@3b58d05f (tried for 70 second(s) with 50 milliseconds interval)
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.2.1', java.version: '18.0.2.1'
+Driver info: driver.version: unknown
+CencoPay@1.0-SNAPSHOT/pages.BasePage.isDisplayed(BasePage.java:33)
+CencoPay@1.0-SNAPSHOT/pages.HomePage.isDisplayHome(HomePage.java:16)
+CencoPay@1.0-SNAPSHOT/steps.HomeSteps.isDisplayHomeScreen(HomeSteps.java:15)
+CencoPay@1.0-SNAPSHOT/stepDefinitions.SignInDefinitions.isDisplayHomeScreen(SignInDefinitions.java:34)
+io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+io.cucumber.java.Invoker.invoke(Invoker.java:24)
+io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:130)
+io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:130)
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:59)
+</system-err></testcase><testcase name="Validate the mail format"/></testsuite>
